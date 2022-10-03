@@ -7,8 +7,8 @@ import Hello from './components/Hello';
 function App() {
   return (
     <div className="App">
-      <Greet name="Bruce" heroName="Batman"/>
-      <Greet name="Clark" heroName="Superman"/>
+      <Greet name="Bruce" heroName="Batman"><p>This is Batman Children</p></Greet>
+      <Greet name="Clark" heroName="Superman"><button>Action</button></Greet>
       <Greet name="Diana" heroName="Wonderwoman"/>
       <Welcome/>
       <Hello/>
