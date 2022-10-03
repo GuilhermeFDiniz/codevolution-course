@@ -9,11 +9,11 @@ import Counter from './components/Counter';
 function App() {
   return (
     <div className="App">
-      {/* <Greet name="Bruce" heroName="Batman"><p>This is Batman Children</p></Greet>
-      <Welcome name="Bruce" heroName="Batman"/>
-      <Hello/>
-      <Message/> */}
-      <Counter/>
+      <Greet heroName="Batman" name="Bruce" ><p>This is Batman Children</p></Greet>
+      {/* <Welcome name="Bruce" heroName="Batman"/> */}
+      {/* <Hello/> */}
+      {/* <Message/> */}
+      {/* <Counter/> */}
     </div>
   );
 }
