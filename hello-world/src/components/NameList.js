@@ -1,4 +1,5 @@
 import React from 'react'
+import Person from './Person'
 
 function NameList() {
   const persons = [
@@ -21,14 +22,10 @@ function NameList() {
       skill: 'Vue'
     },
   ]
-  const names = ['Bruce', 'Clark', 'Diana']
-  const nameList = names.map(name => <h2>{name}</h2>)
+  const personList = persons.map(person => <Person person={person}/>)
+  // const nameList = names.map(name => <h2>{name}</h2>)
   return (
-    <div>
-      {
-        nameList
-      }
-    </div>
+    <div>{personList}</div>
   )
 }
 
