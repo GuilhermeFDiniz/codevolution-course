@@ -1,13 +1,14 @@
+import React, { Component } from 'react';
 import './App.css';
-import FragmentDemo from './components/FragmentDemo';
-import ParentComp from './components/ParentComp';
-import PureComp from './components/PureComp';
+import RefsDemo from './components/RefsDemo';
+
+
 
 
 function App() {
   return (
     <div className="App">
-      <ParentComp/>
+      <RefsDemo/>
     </div>
   );
 }
