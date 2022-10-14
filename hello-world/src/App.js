@@ -1,12 +1,12 @@
 import './App.css';
 import FragmentDemo from './components/FragmentDemo';
-import Table from './components/Table';
+import PureComp from './components/PureComp';
+
 
 function App() {
   return (
     <div className="App">
-      <Table/>
-      {/* <FragmentDemo/> */}
+      <PureComp/>
     </div>
   );
 }
