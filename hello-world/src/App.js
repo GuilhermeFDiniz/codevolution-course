@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import FocusInput from './components/FocusInput';
 import RefsDemo from './components/RefsDemo';
 
 
@@ -8,7 +9,8 @@ import RefsDemo from './components/RefsDemo';
 function App() {
   return (
     <div className="App">
-      <RefsDemo/>
+      <FocusInput/>
+      {/* <RefsDemo/> */}
     </div>
   );
 }
