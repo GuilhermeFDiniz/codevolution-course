@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import PortalDemo from './components/PortalDemo';
+import ErrorBoundary from './components/ErrorBoundary';
+import Hero from './components/Hero';
+
 
 
 
@@ -9,7 +11,17 @@ import PortalDemo from './components/PortalDemo';
 function App() {
   return (
     <div className="App">
-      <PortalDemo/>
+      <ErrorBoundary>
+        <Hero heroName="Batman"/>
+      </ErrorBoundary>
+
+      <ErrorBoundary>
+        <Hero heroName="Superman"/>
+      </ErrorBoundary>
+
+      <ErrorBoundary>
+        <Hero heroName="Joker"/>
+      </ErrorBoundary>
     </div>
   );
 }
