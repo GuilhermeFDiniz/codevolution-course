@@ -8,8 +8,12 @@ import User from './components/User';
 function App() {
   return (
     <div className="App">
-      <CounterThree render={(count, incrementCount)=> <ClickCounterTwo count={count} incrementCount={incrementCount}/>}/>
-      <CounterThree render={(count, incrementCount)=> <HoverCounterTwo count={count} incrementCount={incrementCount}/>}/>
+      <CounterThree>
+        {(count, incrementCount)=> <ClickCounterTwo count={count} incrementCount={incrementCount}/>}
+        </CounterThree>
+      <CounterThree>
+      {(count, incrementCount)=> <HoverCounterTwo count={count} incrementCount={incrementCount}/>}
+      </CounterThree>
      {/* <ClickCounterTwo/>
      <HoverCounterTwo/>
      <User render={ (isLoggedIn) =>  isLoggedIn ? 'Guilherme' : 'Guest'}/> */}
