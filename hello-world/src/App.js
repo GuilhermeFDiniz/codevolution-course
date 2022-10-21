@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/userContext';
 
 function App() {
   return (
     <div className="App">
-      <ComponentC/>
+      <UserProvider value='Guilherme'>
+        <ComponentC/>
+      </UserProvider>
     </div>
   );
 }
