@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import IntervalHookCounter from './components/IntervalHookCounter';
-import DataFetching from './components/DataFetching';
+import CounterOne from './components/CounterOne';
+
 
 function App() {
   return (
     <div className="App">
-      <DataFetching/>
+      <CounterOne/>
     </div>
   );
 }
