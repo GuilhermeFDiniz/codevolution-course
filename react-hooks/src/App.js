@@ -1,14 +1,12 @@
 import './App.css';
-import CounterCustomOne from './components/CounterCustomOne';
-import CounterCustomTwo from './components/CounterCustomTwo';
+import UserForm from './components/UserForm';
 
 
 
 function App() {
   return (
     <div className="App">
-      <CounterCustomOne/>
-      <CounterCustomTwo/>
+      <UserForm/>
     </div>
   );
 }
