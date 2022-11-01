@@ -1,14 +1,13 @@
 import './App.css';
-import ArrayUseState from './components/Immutable State/ArrayUseState';
-import ObjectUseState from './components/Immutable State/ObjectUseState';
+import Parent from './components/Parent Child/Parent';
+
 
 
 
 function App() {
   return (
     <div className="App">
-     {/* <ObjectUseState/> */}
-     <ArrayUseState/>
+      <Parent/>
     </div>
   );
 }
