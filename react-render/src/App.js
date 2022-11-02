@@ -1,5 +1,8 @@
 import './App.css';
-import Parent from './components/Parent Child/Parent';
+import ChildOne from './components/Optimization/ChildOne';
+import GrandParent from './components/Optimization/GrandParent';
+import ParentOne from './components/Optimization/ParentOne';
+
 
 
 
@@ -7,7 +10,7 @@ import Parent from './components/Parent Child/Parent';
 function App() {
   return (
     <div className="App">
-      <Parent/>
+      <GrandParent/>
     </div>
   );
 }
