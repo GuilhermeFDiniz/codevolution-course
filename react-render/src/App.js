@@ -1,5 +1,5 @@
 import './App.css';
-import ParentTwo from './components/Optimization/ParentTwo';
+import ParentThree from './components/Incorrect Optimizations/ParentThree';
 
 
 
@@ -8,7 +8,7 @@ import ParentTwo from './components/Optimization/ParentTwo';
 function App() {
   return (
     <div className="App">
-      <ParentTwo/>
+      <ParentThree/>
     </div>
   );
 }
