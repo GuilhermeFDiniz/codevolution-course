@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Alakazam",
+    "price": 100,
+    "imgUrl": "../../public/images/Alakazam.png"
+  },
+  {
+    "id": 2,
+    "name": "Bulbasaur",
+    "price": 10,
+    "imgUrl": "../../public/images/Bulbasaur.png"
+  },
+  {
+    "id": 3,
+    "name": "Butterfree",
+    "price": 20,
+    "imgUrl": "../../public/images/Butterfree.png"
+  },
+  {
+    "id": 4,
+    "name": "Squirtle",
+    "price": 10,
+    "imgUrl": "../../public/images/Squirtle.png"
+  },
+  {
+    "id": 5,
+    "name": "Pikachu",
+    "price": 15,
+    "imgUrl": "../../public/images/Pikachu.png"
+  },
+  {
+    "id": 6,
+    "name": "Gengar",
+    "price": 90,
+    "imgUrl": "../../public/images/Gengar.png"
+  },
+  {
+    "id": 7,
+    "name": "Charmander",
+    "price": 10,
+    "imgUrl": "../../public/images/Charmander.png"
+  },
+  {
+    "id": 8,
+    "name": "Psyduck",
+    "price": 8,
+    "imgUrl": "../../public/images/Psyduck.png"
+  }
+]
