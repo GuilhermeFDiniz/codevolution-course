@@ -35,7 +35,9 @@ export function ShoppingCartProvider( {children}: ShoppingCartProviderProps ) {
   function cartQuantity = cartItems.reduce(
     (quantity, item) => item.quantity + quantity,
     0
-    )
+  )
+
+  const openCart = () => setIsOpen(true)
 
   function getItemQuantity(id: number) {
     return cartItems.find(item => item.id === id)?.quantity || 0
@@ -79,7 +81,20 @@ export function ShoppingCartProvider( {children}: ShoppingCartProviderProps ) {
     })
   }
 
-  return <ShoppingCartContext.Provider value={{ getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart}}>
-    {children}
-  </ShoppingCartContext.Provider>
+  return (
+    <ShoppingCartContext.Provider
+      value={{
+        getItemQuantity,
+        increaseCartQuantity,
+        decreaseCartQuantity,
+        removeFromCart,
+        openCart,
+        closeCart,
+        cartItems,
+        cartQuantity
+      }}
+    >
+      {children}
+    </ShoppingCartContext.Provider>
+  )
 }
