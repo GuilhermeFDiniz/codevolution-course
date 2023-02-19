@@ -1,2 +1,2 @@
-# react-codevolution
-React Repository for the Codevolution Course
+## Repository for the Codevolution Course
+ReactJS | NodeJS | TypeScript | Next.js | MongoDB

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo, useCallback } from 'react'
 import { MemoizedChildFive } from './ChildFive'
 
 
@@ -12,15 +12,19 @@ const ParentFour = (  ) => {
     lname: 'Wayne'
   }
 
+  const memoizedPerson = useMemo(() => person, [])
+
   const handleClick = () => {}
 
+  const memoizedHandleClick = useCallback(handleClick, [])
 
   console.log('ParentFour Render')
   return (
     <div>
       <button onClick={() => setCount(c => c +1)}> Count - {count}</button>
       <button onClick={() => setName('Codevolution')}>Change Name</button>
-      <MemoizedChildFive name={name} handleClick={person}/>
+      {/* <MemoizedChildFive name={name} handleClick={memoizedPerson}/> */}
+      <MemoizedChildFive name={name} handleClick={memoizedHandleClick}/>
     </div>
   )
 }
