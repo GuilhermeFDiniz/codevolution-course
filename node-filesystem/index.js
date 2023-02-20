@@ -1,28 +1,46 @@
-const fs = require("node:fs")
+const fs = require("node:fs/promises")
 
-console.log("first");
-
-const fileContent = fs.readFileSync("./file.txt", "utf-8")
-console.log(fileContent);
-
-console.log("second");
-
-fs.readFile("./file.txt", "utf-8", (error,data) => {
-  if(error){
-    console.log(error);
-  } else {
+async function readFile() {
+  try{
+    const data = await fs.readFile("file.txt", "utf-8")
     console.log(data);
+  }catch(err){
+    console.log(err);
   }
-})
+}
 
-console.log("third");
+readFile()
+// console.log("First");
+// fs.readFile("file.txt", "utf-8")
+// .then(data=> console.log(data))
+// .catch(err => console.log(err))
 
-fs.writeFileSync("./greet.txt", "Hello World")
+// console.log("Second");
+// const fs = require("node:fs")
 
-fs.writeFile("./greet.txt", " Hello Guilherme", {flag: "a"}, (error, data) => {
-  if(error){
-    console.log(error);
-  } else {
-    console.log("File Written");
-  }
-})
+// console.log("first");
+
+// const fileContent = fs.readFileSync("./file.txt", "utf-8")
+// console.log(fileContent);
+
+// console.log("second");
+
+// fs.readFile("./file.txt", "utf-8", (error,data) => {
+//   if(error){
+//     console.log(error);
+//   } else {
+//     console.log(data);
+//   }
+// })
+
+// console.log("third");
+
+// fs.writeFileSync("./greet.txt", "Hello World")
+
+// fs.writeFile("./greet.txt", " Hello Guilherme", {flag: "a"}, (error, data) => {
+//   if(error){
+//     console.log(error);
+//   } else {
+//     console.log("File Written");
+//   }
+// })
