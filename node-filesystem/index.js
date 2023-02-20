@@ -1,46 +1,13 @@
-const fs = require("node:fs/promises")
+const fs = require("node:fs")
 
-async function readFile() {
-  try{
-    const data = await fs.readFile("file.txt", "utf-8")
-    console.log(data);
-  }catch(err){
-    console.log(err);
-  }
-}
+const readableStream = fs.createReadStream('./file.txt', {
+  encoding: "utf-8",
+  highWaterMark: 2,
+})
 
-readFile()
-// console.log("First");
-// fs.readFile("file.txt", "utf-8")
-// .then(data=> console.log(data))
-// .catch(err => console.log(err))
+const writeableStream = fs.createWriteStream("./file2.txt")
 
-// console.log("Second");
-// const fs = require("node:fs")
-
-// console.log("first");
-
-// const fileContent = fs.readFileSync("./file.txt", "utf-8")
-// console.log(fileContent);
-
-// console.log("second");
-
-// fs.readFile("./file.txt", "utf-8", (error,data) => {
-//   if(error){
-//     console.log(error);
-//   } else {
-//     console.log(data);
-//   }
-// })
-
-// console.log("third");
-
-// fs.writeFileSync("./greet.txt", "Hello World")
-
-// fs.writeFile("./greet.txt", " Hello Guilherme", {flag: "a"}, (error, data) => {
-//   if(error){
-//     console.log(error);
-//   } else {
-//     console.log("File Written");
-//   }
-// })
+readableStream.on("data", (chunk) => {
+  console.log(chunk);
+  writeableStream.write(chunk)
+})
